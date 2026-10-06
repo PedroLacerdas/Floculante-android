@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+    <!-- ABA CONTROLE -->
+    <LinearLayout android:id="@+id/painelControle" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="4">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Registrar turno" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnData" style="@style/Campo" />
+                <Spinner android:id="@+id/spTurno" style="@style/Campo" />
+                <EditText android:id="@+id/edVazao" style="@style/Campo" android:hint="Vazão média (L/h)" android:inputType="numberDecimal" />
+                <!-- Só no modo administrador -->
+                <EditText android:id="@+id/edConc" style="@style/Campo" android:hint="Concentração do floculante (%)" android:inputType="numberDecimal" android:visibility="gone" />
+                <EditText android:id="@+id/edConsumo" style="@style/Campo" android:hint="Consumo do turno (kg)" android:inputType="numberDecimal" />
+                <Button android:id="@+id/btnSalvar" style="@style/Campo" android:text="Salvar e debitar do estoque" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp" android:text="Entrada de estoque" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/edEntrada" style="@style/Campo" android:hint="Quantidade recebida (kg)" android:inputType="numberDecimal" />
+                <EditText android:id="@+id/edLote" style="@style/Campo" android:hint="Lote" android:inputType="textCapCharacters" />
+                <CheckBox android:id="@+id/cbColeta" style="@style/Campo" android:text="Coleta do floculante realizada" />
+                <Button android:id="@+id/btnEntrada" style="@style/Campo" android:text="Registrar entrada" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="6">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <GridLayout android:id="@+id/gridKpi" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:columnCount="3" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="Médias por turno (30 dias)" android:textSize="18sp" android:textStyle="bold" />
+                <!-- O gráfico de concentração só entra no modo administrador -->
+                <LinearLayout android:id="@+id/graficos" android:layout_width="match_parent"
+                    android:layout_height="200dp" android:orientation="horizontal" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="Últimos registros" android:textSize="18sp" android:textStyle="bold" />
+                <LinearLayout android:id="@+id/listaRegistros" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="Últimas entradas" android:textSize="18sp" android:textStyle="bold" />
+                <LinearLayout android:id="@+id/listaEntradas" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- ABA TESTES -->
+    <LinearLayout android:id="@+id/painelTeste" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:visibility="gone">
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="4">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Registrar teste" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnDataT" style="@style/Campo" />
+                <EditText android:id="@+id/edProduto" style="@style/Campo" android:hint="Produto / fornecedor testado" android:inputType="text" />
+                <EditText android:id="@+id/edDose" style="@style/Campo" android:hint="Dosagem testada (g/t)" android:inputType="numberDecimal" />
+                <EditText android:id="@+id/edConcT" style="@style/Campo" android:hint="Concentração (%)" android:inputType="numberDecimal" />
+                <EditText android:id="@+id/edSolidos" style="@style/Campo" android:hint="Percentual de sólidos da polpa (%)" android:inputType="numberDecimal" />
+                <EditText android:id="@+id/edMaterial" style="@style/Campo" android:hint="Material" android:inputType="text" />
+                <EditText android:id="@+id/edResultado" style="@style/Campo" android:hint="Resultado / observações" android:inputType="textMultiLine" />
+                <Spinner android:id="@+id/spStatus" style="@style/Campo" />
+                <Button android:id="@+id/btnSalvarT" style="@style/Campo" android:text="Salvar teste" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="6">
+            <LinearLayout android:id="@+id/listaTestes" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

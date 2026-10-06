@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde">#188038</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="preto">#000000</color>
+
+    <!-- Paleta do app: branco, verde e preto -->
+    <style name="Theme.Floculantes" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/verde</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorPrimaryContainer">@color/verde</item>
+        <item name="colorOnPrimaryContainer">@color/branco</item>
+        <item name="colorSecondary">@color/verde</item>
+        <item name="colorOnSecondary">@color/branco</item>
+        <item name="colorSecondaryContainer">@color/verde</item>
+        <item name="colorOnSecondaryContainer">@color/branco</item>
+        <item name="colorTertiary">@color/verde</item>
+        <item name="colorOnTertiary">@color/branco</item>
+        <item name="android:colorBackground">@color/branco</item>
+        <item name="colorOnBackground">@color/preto</item>
+        <item name="colorSurface">@color/branco</item>
+        <item name="colorOnSurface">@color/preto</item>
+        <item name="colorSurfaceVariant">@color/branco</item>
+        <item name="colorOnSurfaceVariant">@color/preto</item>
+        <item name="colorSurfaceContainerLowest">@color/branco</item>
+        <item name="colorSurfaceContainerLow">@color/branco</item>
+        <item name="colorSurfaceContainer">@color/branco</item>
+        <item name="colorSurfaceContainerHigh">@color/branco</item>
+        <item name="colorSurfaceContainerHighest">@color/branco</item>
+        <item name="colorOutline">@color/preto</item>
+        <item name="colorOutlineVariant">@color/preto</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:statusBarColor">@color/verde</item>
+    </style>
+</resources>

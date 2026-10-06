@@ -1,0 +1,14 @@
+# Gerados na compilação
+.gradle/
+build/
+.kotlin/
+*.apk
+*.aab
+
+# Configuração local de cada computador
+local.properties
+.idea/
+*.iml
+
+# Chaves do Firebase: cada pessoa coloca o seu arquivo em app/
+google-services.json
